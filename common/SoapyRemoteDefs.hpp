@@ -31,7 +31,7 @@
  * Larger transfer sizes may not be supported in hardware
  * or may require tweaks to the system configuration.
  */
-#define SOAPY_REMOTE_DEFAULT_ENDPOINT_MTU 1500
+#define SOAPY_REMOTE_DEFAULT_ENDPOINT_MTU 4096 //Changed from 1500 to 4096 for XTRX -AN
 
 /*!
  * Stream args key to set the very large socket buffer size in bytes.
@@ -47,7 +47,7 @@
 #ifdef __APPLE__ //large buffer size causes crash
 #define SOAPY_REMOTE_DEFAULT_ENDPOINT_WINDOW (16*1024)
 #else
-#define SOAPY_REMOTE_DEFAULT_ENDPOINT_WINDOW (42*1024*1024)
+#define SOAPY_REMOTE_DEFAULT_ENDPOINT_WINDOW (64*1024) //Changed from 42*1024*1024 to make the window size a power of two for XTRX -AN
 #endif
 
 /*!
