@@ -2,6 +2,9 @@ This is a fork of SoapyRemote meant specifically for use with the XTRX as severa
  - Set default MTU size to 4096 as the XTRX is hard coded to return 4096 when asked for MTU.
  - Set default window size to 64KiB, this needs to be a number which is a power of two. 
 
+Known issues related to SoapyRemote so far:
+- The XTRX doesn't close properly after running both deactivateStream() and closeStream()
+
 # Use any Soapy SDR remotely
 
 ## Build Status
